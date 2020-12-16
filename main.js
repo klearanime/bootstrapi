@@ -9,7 +9,7 @@ getTaco.innerText
 
 xhr.addEventListener('loadend', () => {
     const data = JSON.parse(xhr.responseText);
-    console.log(data);
+    console.log(data.recipe);
 })
 
 
@@ -17,10 +17,7 @@ xhr.open('GET', 'http://taco-randomizer.herokuapp.com/random/?full-taco=true')
 xhr.setRequestHeader('Accept', 'application/json');
 xhr.send();
 
-console.log('hello')
 
-
-console.log(data.recipe)
 
 
 
